@@ -1,14 +1,20 @@
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 public class Person{
+=======
+public class Person implements Friends {
+	
+	Arraylist friends;
+>>>>>>> fd1f8f217ce79182829105be9892ccbcbcbd32e4
 
 	
 	public Person(String name, Image image) {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public void setFriends(ArrayList friends) {
-		// TODO Auto-generated method stub
+		this.friends = friends;
 		
 	}
 	
@@ -16,4 +22,6 @@ public class Person{
 		// TODO Auto-generated method stub
 		
 	}
+
+		
 }

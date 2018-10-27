@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Person implements Equals {
+public class Person{
 
 	
 	public Person(String name, Image image) {

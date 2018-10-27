@@ -1,0 +1,17 @@
+
+public class Profile
+{
+	String name;
+	Image image;
+	
+	public Profile (String name, Image image) //Constructor 
+	{
+		this.name = name;
+		this.image = image;
+	}
+	
+	public boolean equals(Object o)
+	{
+		if()
+	}
+}

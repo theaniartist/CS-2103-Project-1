@@ -1,0 +1,13 @@
+
+public abstract class MomentsFriends implements MomentCollection
+{
+	
+	public MomentsFriends()
+	{
+		
+	}
+	
+	@Override
+	public void 
+	
+}

@@ -1,0 +1,6 @@
+import java.util.ArrayList;
+
+public interface MomentCollection
+{
+	public abstract void setMoments(ArrayList moments);
+}

@@ -1,14 +1,16 @@
 import java.util.ArrayList;
 
-public class Person implements Equals {
+public class Person implements Friends {
+	
+	Arraylist friends;
 
 	
 	public Person(String name, Image image) {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public void setFriends(ArrayList friends) {
-		// TODO Auto-generated method stub
+		this.friends = friends;
 		
 	}
 	
@@ -16,11 +18,6 @@ public class Person implements Equals {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	@Override
-	public void equals() {
-		// TODO Auto-generated method stub
-		
-	}
+
 		
 }

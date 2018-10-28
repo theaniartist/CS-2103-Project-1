@@ -1,0 +1,10 @@
+
+public class Owner 
+{
+	private PrimaryAccount owner;
+	
+	public Owner()
+	{
+		
+	}
+}

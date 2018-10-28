@@ -1,0 +1,12 @@
+
+public class Owner 
+{
+	private Person owner;
+	
+	public Owner(Person person)
+	{
+		owner = person;
+	}
+	
+	public getOwner
+}

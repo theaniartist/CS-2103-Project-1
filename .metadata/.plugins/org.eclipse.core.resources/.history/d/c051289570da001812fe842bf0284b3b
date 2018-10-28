@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class Person extends PrimaryAccount
+{
+	public Person(String name, Image image) 
+	{
+		super(name, image);
+	}
+	
+	public setPossessions()
+	{
+		
+	}
+	
+	
+}

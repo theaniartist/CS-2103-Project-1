@@ -1,0 +1,13 @@
+import java.util.ArrayList; //TODO: NEED TO IMPORT THIS LIBRAY TO EVERYFILE???
+
+public class Moment 
+{
+	private PrimaryAccount participants;
+	
+
+	public Moment(String name, Image image, ArrayList participants, ArrayList smileValues) 
+	{
+		
+	}
+
+}

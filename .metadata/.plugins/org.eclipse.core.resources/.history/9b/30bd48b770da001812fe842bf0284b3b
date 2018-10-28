@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class Person extends PrimaryAccount
+{
+	private ArrayList pets;
+	
+	public Person(String name, Image image) 
+	{
+		super(name, image);
+	}
+	
+	public setPossessions()
+	{
+		
+	}
+	
+	public void setPets()
+	{
+		
+	}
+}

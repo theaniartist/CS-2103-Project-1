@@ -1,0 +1,13 @@
+
+public class Possession 
+{
+	private Person owner;
+	private price;
+	
+	public Possession(Person owner)
+	{
+		this.owner = owner;
+	}
+	
+	
+}

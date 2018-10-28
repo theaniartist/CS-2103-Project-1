@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class Person extends AimateAccount
+{
+	private ArrayList<Pet> pets;
+	private ArrayList<Possession> possessions;
+	
+	public Person(String name, Image image) 
+	{
+		super(name, image);
+	}
+	
+	public void setPets(ArrayList<Pet> pets) //TODO: Please check whether to copy contents or reference.
+	{
+		this.pets = pets;
+	}
+	
+	public void setPossessions(ArrayList<Possession> possessions)
+	{
+		this.possessions = possessions;
+	}
+}

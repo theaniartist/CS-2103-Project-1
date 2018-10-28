@@ -1,0 +1,10 @@
+
+public class Owner 
+{
+	private Person owner;
+	
+	public void setOwner(Person person)
+	{
+		owner = person;
+	}
+}

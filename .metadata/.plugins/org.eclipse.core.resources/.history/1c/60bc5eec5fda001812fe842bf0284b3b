@@ -1,7 +1,0 @@
-import java.util.ArrayList;
-
-public class PrimaryAccount 
-{
-	private ArrayList friends;
-	private ArrayList moments;
-}

@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
-public abstract class MomentsFriends 
+public abstract class MomentsFriends extends InanimateAccount
 {
+	private ArrayList <Moment> moments;
 	
 	public MomentsFriends()
 	{
@@ -11,7 +12,7 @@ public abstract class MomentsFriends
 	@Override
 	public void setMoments(ArrayList moments)
 	{
-		
+		this.moments = moments;
 	}
 	
 }

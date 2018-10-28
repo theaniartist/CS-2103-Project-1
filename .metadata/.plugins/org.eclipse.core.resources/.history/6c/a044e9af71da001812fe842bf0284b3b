@@ -1,0 +1,16 @@
+
+public class Possession 
+{
+	private Person owner;
+	private double price;
+	
+	public Possession(Person owner)
+	{
+		this.owner = owner;
+	}
+	
+	public double getPrice()
+	{
+		return 
+	}
+}

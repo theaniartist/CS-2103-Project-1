@@ -1,6 +1,15 @@
-public class Image {
-	String filename;
-	public Image (String filename) {
+
+public class Image 
+{
+	private String filename;
+	
+	public Image (String filename) 
+	{
 		this.filename = filename;
+	}
+	
+	public String getFileName()
+	{
+		return filename;
 	}
 }

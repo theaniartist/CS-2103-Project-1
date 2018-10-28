@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public abstract class PrimaryAccount extends Account //Should this be abstract ASK OFFICE HOURS.
+{
+	private ArrayList friends;
+	private ArrayList moments;
+	
+	public PrimaryAccount(String name, Image image)
+	{
+		super(name, image);
+	}
+	
+	public void setFriends(ArrayList friends)
+	{
+		this.friends = friends;
+	}
+	
+	public void setMoments(ArrayList moments)
+	{
+		this.moments = moments;
+	}
+	
+	public ArrayList getFriends()
+	{
+		return friends;
+	}
+	
+	public void addFriend(PrimaryAccount friend)
+	{
+		friends.add(friend);
+	}
+}
+

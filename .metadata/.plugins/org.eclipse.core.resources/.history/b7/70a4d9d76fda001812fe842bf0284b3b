@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+public class Pet {
+	
+	public Person owner; //Results in null owner to start.
+	
+	public Pet () 
+	{
+		
+	}
+	
+	public Pet (String name, Image image) {
+		
+	}
+
+	public void setOwner(Person _michelle) {
+		
+	}
+
+	public void setFriends(ArrayList boList) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setMoments(ArrayList boMoments) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

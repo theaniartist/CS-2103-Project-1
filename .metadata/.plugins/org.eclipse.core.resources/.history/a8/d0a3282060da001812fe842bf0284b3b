@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+public class PrimaryAccount 
+{
+	private ArrayList friends;
+	private ArrayList moments;
+	
+	protected PrimaryAccount(ArrayList friends, ArrayList moments)
+	{
+		this.friends = friends;
+	}
+}

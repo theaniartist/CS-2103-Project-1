@@ -1,0 +1,7 @@
+
+public class Possession 
+{
+	private Person owner;
+	
+	public Possession
+}

@@ -1,0 +1,6 @@
+public class Image { //Why do we need a class.
+	String filename;
+	public Image (String filename) {
+		this.filename = filename;
+	}
+}

@@ -1,19 +1,22 @@
 import java.util.ArrayList;
 
-public class Person{
-
+public class Person extends AnimateAccount
+{
+	private ArrayList<Pet> pets;
+	private ArrayList<Possession> possessions;
 	
-	public Person(String name, Image image) {
-		// TODO Auto-generated constructor stub
-	}
-
-	public void setFriends(ArrayList friends) {
-		// TODO Auto-generated method stub
-		
+	public Person(String name, Image image) 
+	{
+		super(name, image);
 	}
 	
-	public void setMoments(ArrayList moments) {
-		// TODO Auto-generated method stub
-		
+	public void setPets(ArrayList<Pet> pets) //TODO: Please check whether to copy contents or reference.
+	{
+		this.pets = pets;
+	}
+	
+	public void setPossessions(ArrayList<Possession> possessions)
+	{
+		this.possessions = possessions;
 	}
 }

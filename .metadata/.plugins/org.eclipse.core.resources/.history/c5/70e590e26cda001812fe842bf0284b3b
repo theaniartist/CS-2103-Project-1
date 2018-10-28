@@ -1,0 +1,9 @@
+
+public class Owner 
+{
+	private Person owner;
+	
+	public Owner()
+	
+	}
+}

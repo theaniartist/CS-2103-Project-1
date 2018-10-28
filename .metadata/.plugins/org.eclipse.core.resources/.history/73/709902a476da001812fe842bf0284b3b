@@ -1,0 +1,52 @@
+/*
+ * Data Definition:
+ * 
+ * Class Name: Account
+ * Type Comment: Account is a broad base/superclass in which lower subclasses may inherit datafields / methods from
+ * 				 which apply to all accounts in Facebuk.
+ * Interpretation: Account has 1 datafield / attribute:
+ * 				    DATAFIELDS:
+ *    				 - private Identity identity: ALL accounts on Facebuk have an identity.
+ *                  METHODS:
+ *                   - public String getName(): Returns name of identity object.
+ *                   - public Image getImage(): Returns Image object that the identity object has.
+ *                   - public boolean equals(Object object): Will return a true if the object passed in has the same 
+ *                     										 the same class name as the object that called the method. 
+ * Software Relationship:
+ *  - Uppermost base class for all accounts on Facebuk. (Inheritance)
+ *  
+ */
+public abstract class Account 
+{
+	private Identity identity;
+	
+	public Account(String name, Image image)
+	{
+		/*
+		 * Purpose:
+		 */
+		identity = new Identity(name, image);
+	}
+	
+	public String getName()
+	{
+		return identity.name;
+	}
+	
+	public Image getImage()
+	{
+		return identity.image;
+	}
+	
+	public boolean equals(Object object)
+	{
+		if(this.getClass().getName().equals(object.getClass().getName()))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

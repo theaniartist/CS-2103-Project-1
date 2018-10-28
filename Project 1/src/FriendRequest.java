@@ -1,5 +1,6 @@
 
-public class FriendRequest {
+public class FriendRequest 
+{
 	
 	public FriendRequest (Profile person, Profile pet) {
 		

@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 
-public class Pet {
-	public Pet () {
-		
-	}
+public class Pet extends AnimateAccount
+{
+	private Person owner;
 	
-	public Pet (String name, Image image) {
-		
+	public Pet (String name, Image image) 
+	{
+		super(name, image);
 	}
 
-	public void setOwner(Person _michelle) {
-		// TODO Auto-generated method stub
-		
+	public void setOwner(Person person) 
+	{
+		owner = person;
 	}
 
 	public void setFriends(ArrayList boList) {
@@ -23,6 +23,4 @@ public class Pet {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
 }

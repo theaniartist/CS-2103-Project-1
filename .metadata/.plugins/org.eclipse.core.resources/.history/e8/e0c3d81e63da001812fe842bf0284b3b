@@ -1,0 +1,29 @@
+
+public abstract class Identity
+{
+	private String name;
+	private Image image;
+	
+	public Identity (String name, Image image) //Constructor 
+	{
+		this.name = name;
+		this.image = image;
+	}
+	
+	public void getName()
+	{
+		
+	}
+	
+	public boolean equals(Object o)
+	{
+		if(name.equals(o.getName())) //TODO
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

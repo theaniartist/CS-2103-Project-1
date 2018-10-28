@@ -1,0 +1,5 @@
+
+public abstract class InanimateAccount extends Account //Should this be abstract ASK OFFICE HOURS.
+{
+
+}

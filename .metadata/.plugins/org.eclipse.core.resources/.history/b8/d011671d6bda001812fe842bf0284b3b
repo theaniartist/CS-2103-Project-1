@@ -1,0 +1,14 @@
+
+public class Identity
+{
+	private String name;
+	private Image image;
+	
+	public Identity (String name, Image image) //Constructor 
+	{
+		this.name = name;
+		this.image = image;
+	}
+	
+	public String 
+}

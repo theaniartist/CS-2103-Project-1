@@ -1,0 +1,17 @@
+
+public abstract class Account 
+{
+	protected Identity identity;
+	
+	public boolean equals(Object object)
+	{
+		if(this.getClass().getName().equals(object.getClass().getName()))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

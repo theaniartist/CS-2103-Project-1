@@ -1,0 +1,20 @@
+
+public abstract class Account 
+{
+	public Account()
+	{
+		
+	}
+	
+	public boolean equals(Object o)
+	{
+		if(name.equals(o.getClass().getName())) //TODO
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+/*
+ * Data Definition:
+ * 
+ * Class Name: Account
+ * Type Comment: Account is a broad base/superclass in which lower subclasses may inherit datafields / methods from
+ * 				 which apply to all accounts 
+ * 
+ * */
+public abstract class Account 
+{
+	private Identity identity;
+	
+	public Account(String name, Image image)
+	{
+		identity = new Identity(name, image);
+	}
+	
+	public String getName()
+	{
+		return identity.name;
+	}
+	
+	public Image getImage()
+	{
+		return identity.image;
+	}
+	
+	public boolean equals(Object object)
+	{
+		if(this.getClass().getName().equals(object.getClass().getName()))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}

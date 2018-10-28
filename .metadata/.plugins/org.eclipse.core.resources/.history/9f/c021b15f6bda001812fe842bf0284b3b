@@ -1,0 +1,32 @@
+
+public abstract class Account 
+{
+	private Identity identity;
+	
+	public Account(String name, Image image)
+	{
+		identity = new Identity(name, image);
+	}
+	
+	public boolean equals(Object object)
+	{
+		if(this.getClass().getName().equals(object.getClass().getName()))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public String getName()
+	{
+		return identity.name;
+	}
+	
+	public Image()
+	{
+		
+	}
+}

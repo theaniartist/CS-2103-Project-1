@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class Person extends PrimaryAccount
+{
+	private Identity identity;
+	
+	public Person(String name, Image image) 
+	{
+		
+	}
+
+	public void setFriends(ArrayList friends) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void setMoments(ArrayList moments) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,30 @@
+
+public class FriendRequest 
+{
+	
+	private AnimateAccount friend1;
+	private AnimateAccount friend2;
+	
+	private boolean friend1Approve;
+	private boolean friend2Approve;
+
+	public FriendRequest (AnimateAccount friend1, AnimateAccount friend2) {
+	
+		this.friend1 = friend1;
+		this.friend2 = friend2;
+				
+	}
+	
+	public void approve (AnimateAccount friend) {
+		if (friend1Approve == true && friend2Approve == true) {
+			friend1.addFriend(friend2);
+			friend2.addFriend(friend1);
+		} else {
+			throw new IllegalArgumentException("Friend Request Unapproved");
+			
+		}
+	}
+}
+	
+	
+

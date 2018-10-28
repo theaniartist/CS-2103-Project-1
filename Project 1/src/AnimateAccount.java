@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public abstract class AnimateAccount extends Account //Should this be abstract ASK OFFICE HOURS.
 {
 	private ArrayList friends;
-	private ArrayList moments;
+	private ArrayList <Moment> moments;
 	
 	public AnimateAccount(String name, Image image)
 	{

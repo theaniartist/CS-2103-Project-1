@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class MomentsFriends implements MomentCollection
+public abstract class MomentsFriends 
 {
 	
 	public MomentsFriends()

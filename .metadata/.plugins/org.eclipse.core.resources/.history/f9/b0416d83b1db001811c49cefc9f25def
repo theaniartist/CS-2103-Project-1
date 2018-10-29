@@ -1,6 +1,6 @@
-import java.util.ArrayList;
+import java.util.ArrayList; //TODO: NEED TO IMPORT THIS LIBRAY TO EVERYFILE???
 
-public class Moment extends Account 
+public class Moment extends InanimateAccount 
 {
 	private ArrayList<AnimateAccount> participants;
 	private ArrayList<Double> smileValues;

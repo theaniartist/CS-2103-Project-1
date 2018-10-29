@@ -1,0 +1,8 @@
+
+public abstract class InanimateAccount extends Account
+{
+	public InanimateAccount(String name, Image image)
+	{
+		super(name, image);
+	}
+}

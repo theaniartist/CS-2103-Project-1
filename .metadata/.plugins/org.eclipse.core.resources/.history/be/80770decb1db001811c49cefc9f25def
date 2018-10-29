@@ -82,7 +82,7 @@ public abstract class AnimateAccount extends Account
 	{
 		if(moments.size() > 0)
 		{
-			return moments.get(moments.indexOf(Utility.max(findAverageHappinessAmoungMoments())));
+			return moments.get(moments.indexOf(Main.max(findAverageHappinessAmoungMoments())));
 		}
 		else
 		{

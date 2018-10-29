@@ -66,7 +66,7 @@ public abstract class AnimateAccount extends Account
 	public AnimateAccount getFriendWithWhomIAmHappiest()
 	{
 		ArrayList<Double> averageHappiness = findAverageHappinessAmoungFriends();
-		double happiestValue = Utility.max(averageHappiness);
+		double happiestValue = Main.max(averageHappiness);
 		if(happiestValue > 0) //Refine!
 		{
 			int indexOfHappiest = averageHappiness.indexOf(happiestValue);
@@ -82,7 +82,7 @@ public abstract class AnimateAccount extends Account
 	{
 		if(moments.size() > 0)
 		{
-			return moments.get(moments.indexOf(Utility.max(findAverageHappinessAmoungMoments())));
+			return moments.get(moments.indexOf(Main.max(findAverageHappinessAmoungMoments())));
 		}
 		else
 		{

@@ -1,0 +1,15 @@
+
+public class FriendRequest  //Does friends request come from Facebuk or from a person.
+{
+	
+	public FriendRequest (Profile person, Profile pet) {
+		
+		
+	}
+	
+	public void approve (Profile friend) {
+		
+		
+	}
+
+}

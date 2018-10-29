@@ -27,7 +27,17 @@ public abstract class Account
 		 * Signature: String Image -> Invokes new Account object through a subclass.
 		 * Purpose: 
 		 */
-		identity = new Identity(name, image); //Composition.
+		identity = new Identity(name, image); //
+	}
+	
+	public String getName()
+	{
+		return identity.name;
+	}
+	
+	public Image getImage()
+	{
+		return identity.image;
 	}
 	
 	public boolean equals(Object object)

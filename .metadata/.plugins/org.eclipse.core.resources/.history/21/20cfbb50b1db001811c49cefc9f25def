@@ -30,6 +30,16 @@ public abstract class Account
 		identity = new Identity(name, image); //Composition.
 	}
 	
+	public String getName()
+	{
+		return identity.name; //OK to keep public.
+	}
+	
+	public Image getImage()
+	{
+		return identity.image;
+	}
+	
 	public boolean equals(Object object)
 	{
 		if(this.getClass().getName().equals(object.getClass().getName()))

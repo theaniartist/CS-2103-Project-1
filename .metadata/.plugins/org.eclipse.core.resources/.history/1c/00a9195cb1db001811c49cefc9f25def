@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public abstract class AnimateAccount extends Account
@@ -54,11 +55,11 @@ public abstract class AnimateAccount extends Account
 	
 	public ArrayList<Double> findAverageHappinessAmoungMoments()
 	{
-		ArrayList<Double> averageHappiness = Utility.buildList(moments.size(), 0);
+		ArrayList<Double> averageHappiness = Main.buildList(moments.size(), 0);
 		for(int i = 0; i < moments.size(); i++)
 		{
 			Moment currentMoment = moments.get(i);
-			averageHappiness.set(i, Utility.findMeanOfList(currentMoment.getSmileValues()));
+			averageHappiness.set(i, Main.findMeanOfList(currentMoment.getSmileValues()));
 		}
 		return averageHappiness;
 	}
@@ -66,7 +67,7 @@ public abstract class AnimateAccount extends Account
 	public AnimateAccount getFriendWithWhomIAmHappiest()
 	{
 		ArrayList<Double> averageHappiness = findAverageHappinessAmoungFriends();
-		double happiestValue = Utility.max(averageHappiness);
+		double happiestValue = Main.max(averageHappiness);
 		if(happiestValue > 0) //Refine!
 		{
 			int indexOfHappiest = averageHappiness.indexOf(happiestValue);
@@ -82,7 +83,7 @@ public abstract class AnimateAccount extends Account
 	{
 		if(moments.size() > 0)
 		{
-			return moments.get(moments.indexOf(Utility.max(findAverageHappinessAmoungMoments())));
+			return moments.get(moments.indexOf(Main.max(findAverageHappinessAmoungMoments())));
 		}
 		else
 		{

@@ -1,7 +1,7 @@
 
 public class Possession extends InanimateAccount
 {
-	private Person owner;
+	private Person owner; //HOW TO ABSTRACT getOwner();
 	private double price;
 	
 	public Possession(String name, Image image, Person owner, double price)
@@ -13,6 +13,6 @@ public class Possession extends InanimateAccount
 	
 	public double getPrice()
 	{
-		return price; 
+		return price;
 	}
 }

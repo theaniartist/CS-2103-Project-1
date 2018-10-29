@@ -26,5 +26,10 @@ public class Moment extends InanimateAccount
 	{
 		return participants.contains(participant);
 	}
+	
+	public int getParticipantIndex(AnimateAccount participant)
+	{
+		return participants.indexOf(participant);
+	}
 
 }

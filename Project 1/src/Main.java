@@ -8,14 +8,19 @@ public class Main
 		
 	}
 	
-	public static double getMean(ArrayList<Double> list)
+	public static double findSumOfList(ArrayList<Double> list)
 	{
 		double sum = 0;
 		for(int i = 0; i < list.size(); i++)
 		{
 			sum += list.get(i);
 		}
-		return sum / list.size();
+		return sum;
+	}
+	
+	public static double findMeanOfList(ArrayList<Double> list)
+	{
+		return findSumOfList(list) / list.size();
 	}
 	
 	public static ArrayList<Double> buildList(int size, double initValue)
@@ -41,5 +46,4 @@ public class Main
 		
 		return max;
 	}
-
 }

@@ -25,5 +25,7 @@ public class FriendRequest
     	{
     		throw new IllegalArgumentException("Friend Request Unapproved");	
     	}
+
     }
+
 }

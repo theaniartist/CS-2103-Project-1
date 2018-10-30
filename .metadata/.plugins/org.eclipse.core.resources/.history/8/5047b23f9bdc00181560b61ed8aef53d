@@ -23,7 +23,12 @@ public class FriendRequest
         } 
     	else
     	{
-    		throw new IllegalArgumentException("Friend Request Unapproved");	
-    	}
-    }
+    		throw new IllegalArgumentException("Friend Request Unapproved");
+
+                     
+
+              }
+
+       }
+
 }

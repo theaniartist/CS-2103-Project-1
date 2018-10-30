@@ -17,13 +17,25 @@ public class FriendRequest
     {
     	
     	if (_friend1Approve == true && _friend2Approve == true)
+    	
     	{
-    		_friend1.addFriend(_friend2);
-            _friend2.addFriend(_friend1);
-        } 
-    	else
-    	{
-    		throw new IllegalArgumentException("Friend Request Unapproved");	
-    	}
-    }
+
+                      _friend1.addFriend(_friend2);
+
+                      _friend2.addFriend(_friend1);
+
+                     
+
+              } else
+
+              {
+
+                      throw new IllegalArgumentException("Friend Request Unapproved");
+
+                     
+
+              }
+
+       }
+
 }

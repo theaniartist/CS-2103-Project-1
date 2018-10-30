@@ -7,7 +7,7 @@ public class Possession extends Account
 	public Possession(String name, Image image, double price)
 	{
 		super(name, image);
-		//this.owner = owner;
+		this.owner = owner;
 		this.price = price;
 	}
 	

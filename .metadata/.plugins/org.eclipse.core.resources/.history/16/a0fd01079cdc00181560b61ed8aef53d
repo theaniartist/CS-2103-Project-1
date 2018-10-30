@@ -175,24 +175,40 @@ public class FacebukPartialTester {
 	}
 	
 	@Test
-    public void testFriendRequest3 () 
-	{
-		Pet pet1 = new Pet("pet1", new Image("pet1.png"));
-        Pet pet2 = new Pet("pet2", new Image("pet2.png"));
-        FriendRequest friendRequest = new FriendRequest(pet1, pet2);
-        //Returns an updated list of friends for both pet1 and pet2
-        friendRequest.approve(pet1);
+
+    public void testFriendRequest3 () {
+
+           Pet pet1 = new Pet("pet1", new Image("pet1.png"));
+
+           Pet pet2 = new Pet("pet2", new Image("pet2.png"));
+
+           FriendRequest friendRequest = new FriendRequest(pet1, pet2);
+
+           //Returns an updated list of friends for both pet1 and pet2
+
+           friendRequest.approve(pet1);
+
     }
 
+   
+
     @Test
-    public void testFriendRequest4 () 
-    {
-    	Person person1 = new Person("person1", new Image("person1.png"));
-    	Person person2 = new Person("person2", new Image("person2.png"));
-    	FriendRequest friendRequest = new FriendRequest(person1, person2);
-    	//Returns an updated list of friends for both person1 and person2
-    	friendRequest.approve(person1);
+
+    public void testFriendRequest4 () {
+
+           Person person1 = new Person("person1", new Image("person1.png"));
+
+           Person person2 = new Person("person2", new Image("person2.png"));
+
+           FriendRequest friendRequest = new FriendRequest(person1, person2);
+
+           //Returns an updated list of friends for both person1 and person2
+
+           friendRequest.approve(person1);
+
     }
+
+   
 
     @Test
     public void testFriendRequest5 () 

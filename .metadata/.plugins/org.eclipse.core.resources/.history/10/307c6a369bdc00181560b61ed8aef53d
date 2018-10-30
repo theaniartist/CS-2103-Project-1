@@ -22,8 +22,15 @@ public class FriendRequest
             _friend2.addFriend(_friend1);
         } 
     	else
-    	{
-    		throw new IllegalArgumentException("Friend Request Unapproved");	
-    	}
-    }
+
+              {
+
+                      throw new IllegalArgumentException("Friend Request Unapproved");
+
+                     
+
+              }
+
+       }
+
 }

@@ -192,7 +192,10 @@ public class FacebukPartialTester {
     	FriendRequest friendRequest = new FriendRequest(person1, person2);
     	//Returns an updated list of friends for both person1 and person2
     	friendRequest.approve(person1);
+
     }
+
+   
 
     @Test
     public void testFriendRequest5 () 

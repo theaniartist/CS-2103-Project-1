@@ -90,9 +90,6 @@ public abstract class AnimateAccount extends Account
 		}
 	}
 	
-	///////////////////////
-	///////////////////////
-	
 	public ArrayList<AnimateAccount> getSubset(int start, int end)
 	{
 		ArrayList<AnimateAccount> subSet = new ArrayList<AnimateAccount>(); 

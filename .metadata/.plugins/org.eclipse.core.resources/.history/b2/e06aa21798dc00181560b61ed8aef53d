@@ -48,7 +48,8 @@ public abstract class AnimateAccount extends Account
 					numberOfMomentsFriendAppearedIn++;
 				}
 			}
-			averageHappinessList.set(i, averageHappinessList.get(i) / numberOfMomentsFriendAppearedIn);
+			double test = averageHappinessList.get(i) / numberOfMomentsFriendAppearedIn;
+			averageHappinessList.set(i, );
 		}
 		return averageHappinessList;
 	}
@@ -57,9 +58,10 @@ public abstract class AnimateAccount extends Account
 	{
 		ArrayList<Double> averageHappinessList = findAverageHappinessAmoungFriends();
 		double happiestValue = Utility.maxDoubleInList(averageHappinessList);
-		if(happiestValue > 0)
+		if(happiestValue > 0) //Refine!
 		{
-			return friends.get(averageHappinessList.indexOf(happiestValue));
+			int indexOfHappiest = averageHappinessList.indexOf(happiestValue);
+			return friends.get(indexOfHappiest);
 		}
 		else
 		{
@@ -89,9 +91,6 @@ public abstract class AnimateAccount extends Account
 			return null;
 		}
 	}
-	
-	///////////////////////
-	///////////////////////
 	
 	public ArrayList<AnimateAccount> getSubset(int start, int end)
 	{

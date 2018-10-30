@@ -59,7 +59,8 @@ public abstract class AnimateAccount extends Account
 		double happiestValue = Utility.maxDoubleInList(averageHappinessList);
 		if(happiestValue > 0)
 		{
-			return friends.get(averageHappinessList.indexOf(happiestValue));
+			int indexOfHappiest = averageHappinessList.indexOf(happiestValue);
+			return friends.get(indexOfHappiest);
 		}
 		else
 		{
@@ -89,9 +90,6 @@ public abstract class AnimateAccount extends Account
 			return null;
 		}
 	}
-	
-	///////////////////////
-	///////////////////////
 	
 	public ArrayList<AnimateAccount> getSubset(int start, int end)
 	{

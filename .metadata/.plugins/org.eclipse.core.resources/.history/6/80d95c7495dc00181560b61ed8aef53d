@@ -32,50 +32,50 @@ public abstract class AnimateAccount extends Account
 	
 	public ArrayList<Double> findAverageHappinessAmoungFriends()
 	{
-		ArrayList<Double> averageHappinessList = Utility.buildList(friends.size(), 0);
+		ArrayList<Double> averageHappiness = Utility.buildList(friends.size(), 0);
 		for(int i = 0; i < friends.size(); i++)
 		{
 			AnimateAccount currentFriend = friends.get(i);
-			double numberOfMomentsFriendAppearedIn = 0;
 			for(int j = 0; j < moments.size(); j++)
 			{
 				Moment currentMoment = moments.get(j);
+				ArrayList<AnimateAccount> participantsInMoment = currentMoment.getParticipants();
 				if(currentMoment.hasParticipant(currentFriend))
 				{
 					int indexOfFriend = currentMoment.getParticipantIndex(currentFriend);
 					double happinessWithFriend = currentMoment.getSmileValues().get(indexOfFriend);
-					averageHappinessList.set(i, averageHappinessList.get(i) + happinessWithFriend);
-					numberOfMomentsFriendAppearedIn++;
+					averageHappiness.set(i, averageHappiness.get(i) + happinessWithFriend);
 				}
 			}
-			averageHappinessList.set(i, averageHappinessList.get(i) / numberOfMomentsFriendAppearedIn);
+			averageHappiness.set(i, averageHappiness.get(i) / averageHappiness.size());
 		}
-		return averageHappinessList;
+		return averageHappiness;
+	}
+	
+	public ArrayList<Double> findAverageHappinessAmoungMoments()
+	{
+		ArrayList<Double> averageHappiness = Utility.buildList(moments.size(), 0);
+		for(int i = 0; i < moments.size(); i++)
+		{
+			Moment currentMoment = moments.get(i);
+			averageHappiness.set(i, Utility.findMeanOfList(currentMoment.getSmileValues()));
+		}
+		return averageHappiness;
 	}
 	
 	public AnimateAccount getFriendWithWhomIAmHappiest()
 	{
 		ArrayList<Double> averageHappinessList = findAverageHappinessAmoungFriends();
 		double happiestValue = Utility.maxDoubleInList(averageHappinessList);
-		if(happiestValue > 0)
+		if(happiestValue > 0) //Refine!
 		{
-			return friends.get(averageHappinessList.indexOf(happiestValue));
+			int indexOfHappiest = averageHappinessList.indexOf(happiestValue);
+			return friends.get(indexOfHappiest);
 		}
 		else
 		{
 			return null;
 		}
-	}
-	
-	public ArrayList<Double> findAverageHappinessAmoungMoments()
-	{
-		ArrayList<Double> averageHappinessList = new ArrayList<Double>();
-		for(int i = 0; i < moments.size(); i++)
-		{
-			Moment currentMoment = moments.get(i);
-			averageHappinessList.add(Utility.findMeanOfList(currentMoment.getSmileValues()));
-		}
-		return averageHappinessList;
 	}
 	
 	public Moment getOverallHappiestMoment()
@@ -89,9 +89,6 @@ public abstract class AnimateAccount extends Account
 			return null;
 		}
 	}
-	
-	///////////////////////
-	///////////////////////
 	
 	public ArrayList<AnimateAccount> getSubset(int start, int end)
 	{

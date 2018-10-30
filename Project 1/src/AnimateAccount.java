@@ -32,7 +32,7 @@ public abstract class AnimateAccount extends Account
 	
 	public ArrayList<Double> findAverageHappinessAmoungFriends()
 	{
-		ArrayList<Double> averageHappiness = Main.buildList(friends.size(), 0);
+		ArrayList<Double> averageHappiness = Utility.buildList(friends.size(), 0);
 		for(int i = 0; i < friends.size(); i++)
 		{
 			AnimateAccount currentFriend = friends.get(i);
@@ -66,7 +66,7 @@ public abstract class AnimateAccount extends Account
 	public AnimateAccount getFriendWithWhomIAmHappiest()
 	{
 		ArrayList<Double> averageHappiness = findAverageHappinessAmoungFriends();
-		double happiestValue = Utility.max(averageHappiness);
+		double happiestValue = Utility.maxDoubleInList(averageHappiness);
 		if(happiestValue > 0) //Refine!
 		{
 			int indexOfHappiest = averageHappiness.indexOf(happiestValue);
@@ -82,7 +82,7 @@ public abstract class AnimateAccount extends Account
 	{
 		if(moments.size() > 0)
 		{
-			return moments.get(moments.indexOf(Utility.max(findAverageHappinessAmoungMoments())));
+			return moments.get(moments.indexOf(Utility.maxDoubleInList(findAverageHappinessAmoungMoments())));
 		}
 		else
 		{
@@ -90,4 +90,85 @@ public abstract class AnimateAccount extends Account
 		}
 	}
 	
+	public ArrayList<AnimateAccount> getSubset(int start, int end)
+	{
+		ArrayList<AnimateAccount> subSet = new ArrayList<AnimateAccount>(); 
+		for(int i = start; i < end + 1; i++)
+		{
+			subSet.add(friends.get(i));
+		}
+		return subSet;
+	}
+	
+	public ArrayList<ArrayList<AnimateAccount>> getAllFriendSubsets(int start, int end, ArrayList<ArrayList<AnimateAccount>> accumulator)
+	{
+		boolean reachedEnd = end + 1 == friends.size();
+		if(reachedEnd && start == 0) //Base case!
+		{
+			accumulator.add(getSubset(start, end));
+			return accumulator;
+		}
+		else if(reachedEnd)
+		{
+			accumulator.add(getSubset(start, end));
+			return getAllFriendSubsets(0, (end + 1) - start, accumulator);
+		}
+		else
+		{
+			accumulator.add(getSubset(start, end));
+			return getAllFriendSubsets(start + 1, end + 1, accumulator);
+		}
+	}
+	
+	public ArrayList<ArrayList<AnimateAccount>> findAllCliques(ArrayList<ArrayList<AnimateAccount>> setsOfFriends)
+	{
+		ArrayList<ArrayList<AnimateAccount>> cliques = new ArrayList<ArrayList<AnimateAccount>>();
+		for(int i = 0; i < setsOfFriends.size(); i++)
+		{
+			if(isClique(setsOfFriends.get(i)))
+			{
+				cliques.add(setsOfFriends.get(i));
+			}
+		}
+		return cliques;
+	}
+	
+	public static boolean isClique(ArrayList<AnimateAccount> setOfFriends)
+	{
+		if(setOfFriends.size() == 0 || setOfFriends.size() == 1)
+		{
+			return true;
+		}
+		for(int i = 0; i < setOfFriends.size(); i++)
+		{
+			for(int j = 0; j < setOfFriends.size(); j++)
+			{
+				if(i != j && (!setOfFriends.get(i).getFriends().contains(setOfFriends.get(j)) || !setOfFriends.get(j).getFriends().contains(setOfFriends.get(i))))
+				{
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+	
+	public static ArrayList<Integer> sizeOfCliques(ArrayList<ArrayList<AnimateAccount>> setOfCliques)
+	{
+		ArrayList<Integer> cliqueSizes = new ArrayList<Integer>();
+		for(int i = 0; i < setOfCliques.size(); i++)
+		{
+			cliqueSizes.add(setOfCliques.get(i).size());
+		}
+		return cliqueSizes;
+	}
+	
+	public ArrayList<AnimateAccount> findMaximumCliqueOfFriends()
+	{
+		ArrayList<ArrayList<AnimateAccount>> friendSubsets = getAllFriendSubsets(0, 0, new ArrayList<ArrayList<AnimateAccount>>());
+		ArrayList<ArrayList<AnimateAccount>> cliques = findAllCliques(friendSubsets);
+		ArrayList<Integer> cliqueSizes = sizeOfCliques(cliques);
+		int maxCliqueSize = Utility.maxIntInList(cliqueSizes);
+		int indexOfMaximumClique = cliqueSizes.indexOf(maxCliqueSize);
+		return cliques.get(indexOfMaximumClique);
+	}	
 }

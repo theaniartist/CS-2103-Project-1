@@ -34,7 +34,7 @@ public class Utility
 		return tmpIntList;
 	}
 	
-	public static double max(ArrayList<Double> list)
+	public static double maxDoubleInList(ArrayList<Double> list)
 	{
 		double max = 0;
 		for(int i = 0; i < list.size(); i++)
@@ -46,5 +46,18 @@ public class Utility
 		}
 		
 		return max;
-	}
+	}	
+	
+	public static int maxIntInList(ArrayList<Integer> list)
+	{
+		int max = 0;
+		for(int i = 0; i < list.size(); i++)
+		{
+			if(max < list.get(i))
+			{
+				max = list.get(i);
+			}
+		}
+		return max;
+	}	
 }
